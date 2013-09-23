@@ -15,7 +15,7 @@ param(
     $CopyFrom)
 
 #OU path to supplied Enviroment
-$ou_name = "ou=" + $copyfrom + ",ou=servers,dc=pmienvs,dc=pmihq,dc=org"
+$ou_name = "ou=" + $copyfrom + ",ou=servers,dc=enviroment,dc=example,dc=org"
 
 #Test to make sure supplied enviroment is valid
 [string] $Path = $ou_name

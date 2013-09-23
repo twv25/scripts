@@ -57,7 +57,7 @@ $NewCompMemberof_csv = "$NewEnv_Dir\CompMemberof.csv"
 $Dir_Test = Test-Path $Directory
 
 #New OU path
-$New_Ou = "ou=" + $NewEnv + ",ou=servers,dc=pmienvs,dc=pmihq,dc=org"
+$New_Ou = "ou=" + $NewEnv + ",ou=servers,dc=env,dc=example,dc=org"
 
 #used in test env
 #$New_Ou = "ou=" + $NewEnv + ",ou=servers,dc=tsthq,dc=org"
@@ -259,8 +259,8 @@ try {
     Import-Module GroupPolicy
 
     #GPO and New GPO Name
-    $Gpo = "PMIENVS_Servers_" +"$Reference" + "_Servers"
-    $New_Gpo = "PMIENVS_Server_" +"$NewEnv" + "_Servers"
+    $Gpo = "Servers_" +"$Reference" + "_Servers"
+    $New_Gpo = "Server_" +"$NewEnv" + "_Servers"
 
     #Copies and Links Gpo
     Copy-GPO -SourceName $gpo -TargetName $New_Gpo
